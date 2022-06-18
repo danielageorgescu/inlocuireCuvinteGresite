@@ -1,0 +1,28 @@
+package com.itfactory;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String mesaj = "Ma numesc <NumePrenume> si sunt cursant la cursul de <testare> din cadrul companiei <facebook>.";
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Introduceti Numele si prenumele: ");
+        String NumePrenume = scanner.nextLine();
+        Scanner scanner1 = new Scanner(System.in);
+        
+        System.out.println("Introduceti cursul la care participati: ");
+        String curs = scanner1.nextLine();
+        Scanner scanner2 = new Scanner(System.in);
+        
+        System.out.println("Introduceti numele companiei unde participati la curs: ");
+        String companie = scanner2.nextLine();
+        
+        mesaj = mesaj.replace("<NumePrenume>",NumePrenume)
+                .replace("<testare>",curs)
+                .replace("<facebook>",companie);
+
+        System.out.println(mesaj);
+    }
+}
